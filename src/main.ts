@@ -1,7 +1,4 @@
-import sampleHTML from './sample.ts';
 import './style.css';
-
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = sampleHTML();
 
 const reticle = document.createElement('div')
 reticle.id = 'reticle';
