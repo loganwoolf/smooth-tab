@@ -1,51 +1,55 @@
 import './style.css';
 
-/**
- * Initializes and returns the reticle element.
- * @returns {HTMLDivElement} The reticle element.
- */
-export default function init(): HTMLDivElement {
-  const reticle: HTMLDivElement = document.createElement('div');
-  reticle.id = 'reticle';
-  reticle.classList.add('hidden');
-  document.body.appendChild(reticle);
+class SmoothTab {
+  reticle: HTMLDivElement;
+  currentTarget: HTMLElement | null;
+  constructor() {
+    this.reticle = this.createReticle()
+    this.currentTarget = null;
 
-  let currentTarget: HTMLElement;
+    this.init();
+  }
 
-  document.addEventListener('focusin', (e: FocusEvent) => {
-    currentTarget = e.target as HTMLElement;
-    moveReticleToTarget(reticle, currentTarget);
-  });
-  
-  document.addEventListener('scroll', () => {
-    moveReticleToTarget(reticle, currentTarget, true)
-  });
+  createReticle() {
+    const element = document.createElement('div');
+    element.id = 'reticle';
+    element.style.display = 'none';
+    return element
+  }
 
-  return reticle;
+  init(): void {
+    document.body.appendChild(this.reticle);
+
+    document.addEventListener('focusin', (e: FocusEvent) => {
+      this.currentTarget = e.target as HTMLElement;
+      this.moveReticleToTarget(this.reticle, this.currentTarget);
+    });
+
+    document.addEventListener('scroll', () => {
+      this.moveReticleToTarget(this.reticle, this.currentTarget, true)
+    });
+  }
+
+  moveReticleToTarget(reticle: HTMLDivElement, target: HTMLElement | null, snap: boolean = false): void {
+    if (!target || document.activeElement === document.body) {
+      reticle.style.display = 'none';
+      return;
+    }
+    reticle.style.display = 'block';
+    reticle.style.translate = `${target.offsetLeft - window.scrollX}px ${target.offsetTop - window.scrollY}px`;
+
+    let duration: string = reticle.style.transitionDuration;
+    if (snap) {
+      reticle.style.transitionDuration = '0ms';
+    }
+    reticle.style.height = `${target.offsetHeight}px`;
+    reticle.style.width = `${target.offsetWidth}px`;
+    if (snap) {
+      reticle.style.transitionDuration = duration;
+    }
+  }
 }
 
-/**
- * Moves the reticle to the target element.
- * @param target - The target element to move the reticle to.
- * @param snap - Whether to snap the reticle to the target element.
- * @returns void
- */
-function moveReticleToTarget(reticle: HTMLDivElement, target: HTMLElement, snap: boolean = false): void {
-  if (document.activeElement === document.body) {
-    reticle.classList.add('hidden');
-    return;
-  }
-  reticle.classList.remove('hidden');
-  reticle.style.translate = `${target.offsetLeft - window.scrollX}px ${target.offsetTop - window.scrollY}px`;
-  let duration: string = reticle.style.transitionDuration;
-  if (snap) {
-    reticle.style.transitionDuration = '0ms';
-  }
-  reticle.style.height = `${target.offsetHeight}px`;
-  reticle.style.width = `${target.offsetWidth}px`;
-  if (snap) {
-    reticle.style.transitionDuration = duration;
-  }
-}
+const smoothTab = new SmoothTab();
 
-// init();
+console.log(smoothTab)
