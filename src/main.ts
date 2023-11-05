@@ -1,6 +1,6 @@
 import './style.css';
 
-import SmoothTab from './smoothTab';
+import SmoothTab from '../lib/main';
 
 const smoothTab = new SmoothTab;
 
