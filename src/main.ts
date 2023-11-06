@@ -1,5 +1,5 @@
-import SmoothTab from '../lib/main';
-import './style.css';
+import SmoothTab from '../lib/main'
+import './style.css'
 
-const smoothTab = new SmoothTab;
-smoothTab.init();
+const smoothTab = new SmoothTab()
+smoothTab.init()
