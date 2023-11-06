@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "standard-with-typescript",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "overrides": [
+        {
+            "extends": [
+                "plugin:@typescript-eslint/disable-type-checked"
+            ],
+            "files": [
+                "./vite.config.ts"
+            ]
+        }
+    ]
+}
