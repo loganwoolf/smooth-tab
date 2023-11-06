@@ -19,3 +19,15 @@ You will soon be able to install this in your project from npm using your favori
 ## Development
 
 You can get involved in development for this project! Feel free to submit issues and start a discussion. This project is in its infancy and is not feature complete, fully accessible, or tested.
+
+Start the development environment with:
+
+```bash
+# pnpm
+$ pnpm install
+$ pnpm dev
+
+# npm
+$ npm install
+$ npm run dev
+```
