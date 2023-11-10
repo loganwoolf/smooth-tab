@@ -1,3 +1,5 @@
+import './styles.css'
+
 export default class {
   reticle: HTMLDivElement
   currentTarget: HTMLElement | null
