@@ -1,13 +1,13 @@
 #reticle {
-  position: fixed;
+  left: 0;
   outline: 2px solid orange;
   outline-offset: 3px;
+  position: fixed;
   top: 0;
-  left: 0;
   transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
   transition-property: translate, height, width;
-
+  transition-timing-function: ease-in-out;
+  
   &.hidden {
     opacity: 0;
   }
