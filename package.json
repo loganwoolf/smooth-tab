@@ -1,16 +1,20 @@
 {
-  "name": "smooth-tabbing",
-  "version": "0.1.1",
+  "name": "smooth-tab",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loganwoolf/smooth-tab"
+  },
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "dist/smooth-tabbing.cjs",
-  "module": "dist/smooth-tabbing.js",
+  "main": "dist/main.cjs",
+  "module": "dist/main.js",
   "exports": {
     ".": {
-      "require": "./dist/smooth-tabbing.cjs",
-      "import": "./dist/smooth-tabbing.js"
+      "require": "./dist/main.cjs",
+      "import": "./dist/main.js"
     }
   },
   "scripts": {

@@ -17,26 +17,27 @@ Since this reticle is overlaid on top of the entire page, it should not ever hav
 ### Using NPM
 
 ```bash
-$ npm install smooth-tabbing
+$ npm install smooth-tab
 ```
 
 ```javascript
-import SmoothTab from 'smooth-tabbing';
-import 'style.css' from 'smooth-tabbing';
+import SmoothTab from 'smooth-tab';
+import './styles.css' from 'smooth-tab';
 
 new SmoothTab().init();
 ```
 
-### Directly In Browser Using ESM
+### Directly In Browser Using CDN and ESM
 
 ```html
 <head>
     ...
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/smooth-tabbing@latest/dist/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/smooth-tab@latest/dist/style.css">
+
     <script type="module"> 
-        import smooth-tabbing from 'https://cdn.jsdelivr.net/npm/smooth-tabbing@latest/+esm' 
+        import smooth-tab from 'https://cdn.jsdelivr.net/npm/smooth-tab@latest/+esm';
         
-        new SmoothTab().init()
+        new SmoothTab().init();
     </script>
     ...
 </head>

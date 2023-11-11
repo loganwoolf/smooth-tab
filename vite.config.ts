@@ -7,7 +7,7 @@ export default defineConfig({
     copyPublicDir: false,
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
-      name: 'smoothTabbing',
+      name: 'smooth-tab',
       formats: ['es', 'umd']
     }
   },
