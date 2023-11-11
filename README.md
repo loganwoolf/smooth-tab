@@ -14,7 +14,34 @@ Since this reticle is overlaid on top of the entire page, it should not ever hav
 
 ## Installation
 
-You will soon be able to install this in your project from npm using your favorite package manager, or directly into your HTML head using content delivery services.
+### Using NPM
+
+```bash
+$ npm install smooth-tab
+```
+
+```javascript
+import SmoothTab from 'smooth-tab';
+import './styles.css' from 'smooth-tab';
+
+new SmoothTab().init();
+```
+
+### Directly In Browser Using CDN and ESM
+
+```html
+<head>
+    ...
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/smooth-tab@latest/dist/style.css">
+
+    <script type="module"> 
+        import smooth-tab from 'https://cdn.jsdelivr.net/npm/smooth-tab@latest/+esm';
+        
+        new SmoothTab().init();
+    </script>
+    ...
+</head>
+```
 
 ## Development
 

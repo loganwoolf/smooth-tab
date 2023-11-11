@@ -1,7 +1,22 @@
 {
-  "name": "smooth-tabbing",
-  "version": "0.1.0",
+  "name": "smooth-tab",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loganwoolf/smooth-tab"
+  },
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/main.cjs",
+  "module": "dist/main.js",
+  "exports": {
+    ".": {
+      "require": "./dist/main.cjs",
+      "import": "./dist/main.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",
