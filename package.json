@@ -1,7 +1,18 @@
 {
   "name": "smooth-tabbing",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/smooth-tabbing.cjs",
+  "module": "dist/smooth-tabbing.js",
+  "exports": {
+    ".": {
+      "require": "./dist/smooth-tabbing.cjs",
+      "import": "./dist/smooth-tabbing.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",
