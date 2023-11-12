@@ -1,6 +1,6 @@
 {
   "name": "smooth-tab",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/loganwoolf/smooth-tab"
@@ -9,14 +9,14 @@
   "files": [
     "dist"
   ],
-  "main": "dist/main.cjs",
-  "module": "dist/main.js",
+  "main": "dist/smooth-tab.umd.cjs",
+  "module": "dist/smooth-tab.js",
   "exports": {
     ".": {
-      "require": "./dist/main.cjs",
+      "require": "./dist/smooth-tab.umd.js",
       "types": "./dist/main.d.ts",
-      "import": "./dist/main.js",
-      "default": "./dist/main.js"
+      "import": "./dist/smooth-tab.js",
+      "default": "./dist/smooth-tab.js"
     },
     "./css": "./dist/style.css",
     "./dist": "./dist",
