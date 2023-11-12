@@ -16,15 +16,20 @@ Since this reticle is overlaid on top of the entire page, it should not ever hav
 
 ### Using NPM
 
+Add package to project
 ```bash
 $ npm install smooth-tab
 ```
 
+Import and initialize (in JS)
 ```javascript
 import SmoothTab from 'smooth-tab';
-import './styles.css' from 'smooth-tab';
-
 new SmoothTab().init();
+```
+
+Add styles (in CSS)
+```css
+@import 'smooth-tab/css'
 ```
 
 ### Directly In Browser Using CDN and ESM
@@ -53,8 +58,4 @@ Start the development environment with:
 # pnpm
 $ pnpm install
 $ pnpm dev
-
-# npm
-$ npm install
-$ npm run dev
 ```
