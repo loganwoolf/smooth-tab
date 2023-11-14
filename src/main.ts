@@ -1,4 +1,4 @@
-import SmoothTab from '../lib/main'
+import SmoothTab from "../lib/main";
 
-const smoothTab = new SmoothTab()
-smoothTab.init()
+const smoothTab = new SmoothTab();
+smoothTab.init();
