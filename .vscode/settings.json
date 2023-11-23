@@ -1,5 +1,11 @@
 {
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  }
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
 }
