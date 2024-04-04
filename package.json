@@ -6,7 +6,9 @@
         "url": "https://github.com/loganwoolf/smooth-tab"
     },
     "type": "module",
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "main": "dist/smooth-tab.umd.cjs",
     "module": "dist/smooth-tab.js",
     "exports": {
@@ -28,9 +30,9 @@
     },
     "devDependencies": {
         "@biomejs/biome": "1.3.3",
-        "@types/node": "^18.12.0",
-        "typescript": "^5.2.2",
-        "vite": "^4.4.5",
-        "vite-plugin-dts": "^3.6.3"
+        "@types/node": "^18.19.29",
+        "typescript": "^5.4.4",
+        "vite": "^4.5.3",
+        "vite-plugin-dts": "^3.8.1"
     }
 }
