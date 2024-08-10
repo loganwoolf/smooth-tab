@@ -6,9 +6,7 @@
 		"url": "https://github.com/loganwoolf/smooth-tab"
 	},
 	"type": "module",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"main": "dist/smooth-tab.umd.cjs",
 	"module": "dist/smooth-tab.js",
 	"exports": {
@@ -25,7 +23,9 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc --p ./tsconfig-build.json && vite build",
-		"fix": "biome check --apply .",
+		"check": "biome check .",
+		"fix": "biome check --write .",
+		"fixall": "biome check --write --unsafe .",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
