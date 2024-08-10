@@ -1,38 +1,38 @@
 {
-    "name": "smooth-tab",
-    "version": "0.2.2",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/loganwoolf/smooth-tab"
-    },
-    "type": "module",
-    "files": [
-        "dist"
-    ],
-    "main": "dist/smooth-tab.umd.cjs",
-    "module": "dist/smooth-tab.js",
-    "exports": {
-        ".": {
-            "require": "./dist/smooth-tab.umd.js",
-            "types": "./dist/main.d.ts",
-            "import": "./dist/smooth-tab.js",
-            "default": "./dist/smooth-tab.js"
-        },
-        "./css": "./dist/style.css",
-        "./dist": "./dist",
-        "./package.json": "./package.json"
-    },
-    "scripts": {
-        "dev": "vite",
-        "build": "tsc --p ./tsconfig-build.json && vite build",
-        "fix": "biome check --apply .",
-        "preview": "vite preview"
-    },
-    "devDependencies": {
-        "@biomejs/biome": "1.3.3",
-        "@types/node": "^18.19.29",
-        "typescript": "^5.4.4",
-        "vite": "^4.5.3",
-        "vite-plugin-dts": "^3.8.1"
-    }
+	"name": "smooth-tab",
+	"version": "0.2.2",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/loganwoolf/smooth-tab"
+	},
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"main": "dist/smooth-tab.umd.cjs",
+	"module": "dist/smooth-tab.js",
+	"exports": {
+		".": {
+			"require": "./dist/smooth-tab.umd.js",
+			"types": "./dist/main.d.ts",
+			"import": "./dist/smooth-tab.js",
+			"default": "./dist/smooth-tab.js"
+		},
+		"./css": "./dist/style.css",
+		"./dist": "./dist",
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc --p ./tsconfig-build.json && vite build",
+		"fix": "biome check --apply .",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@types/node": "^20.14.15",
+		"typescript": "^5.5.4",
+		"vite": "^5.4.0",
+		"vite-plugin-dts": "^4.0.2"
+	}
 }
