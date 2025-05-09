@@ -11,5 +11,13 @@
 	},
 	"files": {
 		"ignore": ["dist"]
+	},
+	"css": {
+		"formatter": {
+			"enabled": true
+		},
+		"linter": {
+			"enabled": true
+		}
 	}
 }
